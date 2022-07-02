@@ -8,7 +8,7 @@ url='url'
 r=requests.get(url,headers=headers)
 
 data=r.json()
-with open("vk2.txt", "w",encoding="utf-8") as external_file:
+with open("file.txt", "w",encoding="utf-8") as external_file:
     for item in data['response']['items']:
         try:
             print(item['id'],item['first_name'],item['last_name'],item['bdate'],item['city']['title'],file=external_file)
